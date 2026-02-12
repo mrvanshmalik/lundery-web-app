@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <title>Login</title>
+
+</head>
+
+<body>
+
+    <main>
+
+        <div id="login-page" class="flex h-screen justify-center items-center border bg-neutral-300">
+            <div id="login-content"
+                class="border-10 p-4  border-pink-600 rounded-2xl bg-white shadow-md shadow-pink-700 transition-all duration-500 hover:scale-101 hover:shadow-2xl hover:translate-y-0.5 ">
+                <div id="heading" class="border-b-2 border-black/30 py-2 flex flex-col mb-2">
+                    <h1 class="text-2xl font-bold text-pink-900">Welcome To Our Laundry Service </h1>
+                    <p class="text-black/60 font-light mt-1">Please Login To Continue - This is Demo Login Page</p>
+                </div>
+                <div id="login-details" class=" p-2 ">
+                    <form action="" id="login-form">
+                        <div id="login-username-box">
+                            <label class="font-extrabold font-serif text-pink-600 mr-2" for="name">Username : </label>
+                            <input id="login-username" type="text" placeholder="Enter Your Name " required
+                                class="border-2 border-black/60 text-pink-400 font-semibold">
+                        </div>
+
+
+                        <div id="login-email">
+                            <label class="font-extrabold font-serif text-pink-600 mr-9.5" for="email">E-mail : </label>
+                            <input id="email" type="email" placeholder="xyz@example.com "
+                                class="border-2 border-black/60 text-pink-400 font-semibold mt-2 ">
+                        </div>
+
+                        <div class="flex justify-center mt-4 ">
+                            <button type="submit" class="btn-primery ">Login</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </main>
+    
+
+
+
+
+</body>
+
+</html>
