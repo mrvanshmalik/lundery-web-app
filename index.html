@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -51,10 +51,10 @@
                     <ul class="flex justify-center gap-4 grid-cols-4 items-center text-white/70  
                     max-md:flex-wrap max-md:gap-3 max-md:text-sm
                     ">
-                        <a id="nav-home" class="col-span-1 nav_btn" href="#home">Home</a>
-                        <a id="nav-services" class="col-span-1 nav_btn" href="#booking">Services</a>
-                        <a id="nav-about" class="col-span-1 nav_btn" href="#about">About Us</a>
-                        <a id="nav-contact" class="col-span-1 nav_btn" href="#contact">Contact Us</a>
+                        <a id="home-nav" class="col-span-1 nav_btn " href="#home">Home</a>
+                        <a id="services-nav" class="col-span-1 nav_btn " href="#booking">Services</a>
+                        <a id="about-nav" class="col-span-1 nav_btn " href="#about">About Us</a>
+                        <a id="contact-nav" class="col-span-1 nav_btn " href="#contact">Contact Us</a>
                     </ul>
                 </div>
 
@@ -72,7 +72,7 @@
 
 
 
-            <section id="home" class="grid grid-cols-6 grid-rows-4  mt-16 mx-4
+            <section id="home" class="scroll-mt-40 grid grid-cols-6 grid-rows-4  mt-16 mx-4
             max-md:grid-cols-1 max-md:grid-rows-none max-md:gap-6 max-md:mt-10
             ">
                 <div id="hero-left" class=" col-span-3 col-start-1 row-span-3  mt-5 
@@ -110,7 +110,7 @@
                         <div id="book-button" class=" row-span-1 
                         max-md:flex max-md:justify-center
                         ">
-                            <button id="book-btn" class="border rounded-full xl:px-40 p-3 text-center ml-5 text-white font-bold bg-linear-to-tr to-pink-400 from-pink-700 transition-transform duration-300 hover:text-red-300 hover:scale-y-105 hover:scale-105 active:scale-90 hover:shadow-2xl  hover:shadow-red-700 hover:cursor-pointer
+                            <button id="book-btn-home" class="border rounded-full xl:px-40 p-3 text-center ml-5 text-white font-bold bg-linear-to-tr to-pink-400 from-pink-700 transition-transform duration-300 hover:text-red-300 hover:scale-y-105 hover:scale-105 active:scale-90 hover:shadow-2xl  hover:shadow-red-700 hover:cursor-pointer
                                 max-md:ml-0 max-md:w-full max-md:max-w-xs
                                 ">Book
                                 a Service Today</button>
@@ -161,7 +161,7 @@
                 </div>
             </section>
 
-            <section id="booking" class=" border-spacing-y-11 mx-4 rounded-2xl px-16 mt-16 h-fit  
+            <section id="booking" class="scroll-mt-24 border-spacing-y-11 mx-4 rounded-2xl px-16 mt-16 h-fit  
                 max-md:mx-3 max-md:px-3 max-md:py-4 xl:mt-20
                 ">
                 <div id="boxs" class="grid grid-cols-5 grid-rows-2 gap-2 
@@ -196,9 +196,10 @@
                                 max-md:justify-between max-md:w-full
                                 ">
                                     <h4 class="font-bold text-black/70 ">Dry Cleaning </h4>
-                                    <p class=" font-bold font text-pink-600">• Rs.200/kg</p>
+                                    <p class=" font-bold font text-pink-600">• ₹200/kg</p>
                                 </div>
-                                <button value="Dry Cleaning" class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
+                                <button value="Dry Cleaning"
+                                    class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
                             </div>
 
 
@@ -212,9 +213,10 @@
                                 max-md:justify-between max-md:w-full
                                 ">
                                     <h4 class="font-bold text-black/70 ">Woolen Wash </h4>
-                                    <p class=" font-bold font text-pink-600">• Rs.100/kg</p>
+                                    <p class=" font-bold font text-pink-600">• ₹100/kg</p>
                                 </div>
-                                <button value="Woolen Wash" class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
+                                <button value="Woolen Wash"
+                                    class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
                             </div>
 
 
@@ -229,9 +231,10 @@
                                 max-md:justify-between max-md:w-full
                                 ">
                                     <h4 class="font-bold text-black/70 ">Steam Ironing </h4>
-                                    <p class=" font-bold font text-pink-600">• Rs.30/pcs</p>
+                                    <p class=" font-bold font text-pink-600">• ₹30/pcs</p>
                                 </div>
-                                <button value="Steam Ironing" class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
+                                <button value="Steam Ironing"
+                                    class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
                             </div>
 
 
@@ -245,9 +248,10 @@
                                 max-md:justify-between max-md:w-full
                                 ">
                                     <h4 class="font-bold text-black/70 ">Comforter Cleaning </h4>
-                                    <p class=" font-bold font text-pink-600">• Rs.435/pcs</p>
+                                    <p class=" font-bold font text-pink-600">• ₹435/pcs</p>
                                 </div>
-                                <button value="Comforter Cleaning" class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
+                                <button value="Comforter Cleaning"
+                                    class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
                             </div>
 
 
@@ -260,9 +264,10 @@
                                 max-md:justify-between max-md:w-full
                                 ">
                                     <h4 class="font-bold text-black/70 ">Curtain Cleaning </h4>
-                                    <p class=" font-bold font text-pink-600">• Rs.199/-pcs</p>
+                                    <p class=" font-bold font text-pink-600">• ₹199/-pcs</p>
                                 </div>
-                                <button value="Curtain Cleaning" class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
+                                <button value="Curtain Cleaning"
+                                    class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
                             </div>
 
 
@@ -276,9 +281,10 @@
                                 max-md:justify-between max-md:w-full
                                 ">
                                     <h4 class="font-bold text-black/70 ">Wash & Iron Combo </h4>
-                                    <p class=" font-bold font text-pink-600">• Rs.99/kg</p>
+                                    <p class=" font-bold font text-pink-600">• ₹99/kg</p>
                                 </div>
-                                <button value="Wash & Iron Combo" class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
+                                <button value="Wash & Iron Combo"
+                                    class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
                             </div>
 
 
@@ -292,9 +298,10 @@
                                 max-md:justify-between max-md:w-full
                                 ">
                                     <h4 class="font-bold text-black/70 ">Premium Laundry </h4>
-                                    <p class=" font-bold font text-pink-600">• Rs.149/kg</p>
+                                    <p class=" font-bold font text-pink-600">• ₹149/kg</p>
                                 </div>
-                                <button value="Premium Laundry" class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
+                                <button value="Premium Laundry"
+                                    class="btn-primery bg-pink-600 hover:bg-pink-800 max-md:w-full">Add To Cart</button>
                             </div>
 
 
@@ -335,16 +342,16 @@
                         <div id="added-items" class="mt-2  max-md:h-40 h-40 overflow-y-scroll ">
                             <div id="no-item-alert">
                                 <h1 class="w-full h-20  text-center text-6xl font-extralight">⚠</h1>
-                                <p class="text-black/60 font-light w-full text-center" >No Items Added Yet!!</p>
+                                <p class="text-black/60 font-light w-full text-center">No Items Added Yet!!</p>
                             </div>
                             <!-- item add to cart here  -->
-                            
+
                         </div>
 
                         <div id="total-bill" class=" mt-auto pt-3">
                             <div class=" p-1 flex items-center justify-between border-t-2 border-black/30">
                                 <h4 class="font-semibold ml-4">Total Amount</h4>
-                                <p id="billing-amt" class="font-bold text-pink-600 mr-4">Rs.0</p>
+                                <p id="billing-amt" class="font-bold text-pink-600 mr-4"> ₹0</p>
                             </div>
                         </div>
                     </div>
@@ -363,31 +370,40 @@
 
                             <form id="booking-form-box" action="" class=" p-1 bg-white h-60 flex items-start flex-col justify-evenly 
                             max-md:h-auto max-md:py-4">
-                               <h2 class="text-pink-800 font-extrabold text-2xl  w-full text-center bg-pink-300">Booking Form</h2>
+                                <h2 class="text-pink-800 font-extrabold text-2xl  w-full text-center bg-pink-300">
+                                    Booking Form</h2>
 
 
 
 
                                 <div id="name-box" class="mt-2 ml-3 max-md:ml-2 max-md:w-[95%]">
-                                    <label for="name" class="font-bold text-pink-600 mr-2">Full Name :</label>
-                                    <input id="input-booking-name" class=" bg-amber-100 text-center font-serif max-md:w-full" id="name"
-                                        type="text" required placeholder="Enter Your Name">
+                                    <label for="input-booking-name" class="font-bold text-pink-600 mr-2">Full Name
+                                        :</label>
+                                    <input id="input-booking-name"
+                                        class=" bg-amber-100 text-center font-serif max-md:w-full" type="text" required
+                                        placeholder="Enter Your Name">
                                 </div>
 
                                 <div id="email-box" class="mt-2 ml-3 max-md:ml-2 max-md:w-[95%]">
-                                    <label for="email" class="font-bold text-pink-600 mr-8">E-Mail :</label>
-                                    <input id="input-booking-email" class=" bg-amber-100 text-center font-serif max-md:w-full " id="email"
-                                        type="email" required placeholder="xyz@example.com">
+                                    <label for="input-booking-email" class="font-bold text-pink-600 mr-8">E-Mail
+                                        :</label>
+                                    <input id="input-booking-email"
+                                        class=" bg-amber-100 text-center font-serif max-md:w-full " type="email"
+                                        required placeholder="xyz@example.com">
                                 </div>
 
                                 <div id="phone-box" class="mt-2 ml-3 max-md:ml-2 max-md:w-[95%]">
-                                    <label for="phone" class="font-bold text-pink-600 mr-2">Phone No :</label>
-                                    <input id="input-booking-phn" class=" bg-amber-100 text-center font-serif max-md:w-full" id="phone"
-                                        type="tel" name="phone" placeholder="+91 9876543210"
+                                    <label for="input-booking-phn" class="font-bold text-pink-600 mr-2">Phone No
+                                        :</label>
+                                    <input id="input-booking-phn"
+                                        class=" bg-amber-100 text-center font-serif max-md:w-full" type="tel"
+                                        name="phone" placeholder="+91 9876543210"
                                         pattern="^(\+91[\-\s]?)?[6-9][0-9]{9}$" required />
                                 </div>
 
-                                <button id="booked-btn" type="submit" class="btn-primery bg-pink-600 hover:bg-pink-900 mx-auto mt-2 max-md:w-[95%]">Book Now</button>
+                                <button id="booked-btn" type="submit"
+                                    class="btn-primery bg-pink-600 hover:bg-pink-900 mx-auto mt-2 max-md:w-[95%]">Book
+                                    Now</button>
                             </form>
 
 
@@ -397,7 +413,7 @@
             </section>
 
 
-            <section id="about" class="grid grid-rows-2 gap-4 mt-16 max-md:mt-12 max-md:px-3 mx-4 ">
+            <section id="about" class="scroll-mt-24 grid grid-rows-2 gap-4 mt-16 max-md:mt-12 max-md:px-3 mx-4 ">
                 <div id="support" class="row-span-1 row-start-1">
                     <div id="support-content" class="grid grid-cols-4 gap-2 
                         max-md:grid-cols-1 max-md:gap-4">
@@ -453,6 +469,15 @@
                     </div>
                 </div>
 
+
+
+
+
+
+
+
+
+
                 <div id="subscribe" class="row-span-1 row-start-2 bg-pink-600 h-fit rounded-2xl 
                     max-md:rounded-2xl max-md:mx-0">
 
@@ -467,87 +492,111 @@
 
                         <div id="sub-form" class="col-span-3 col-start-3 w-fit ml-4 
                             max-md:col-span-1 max-md:col-start-auto max-md:w-full max-md:ml-0">
-                            <form id="sub-form-content" action="" class="max-md:w-full">
+                            <form id="sub-form-content" action="" class="max-md:w-full ">
 
                                 <div id="form-sub-content" class="flex 
                                     max-md:flex-col max-md:gap-3">
-                                    <input type="text" placeholder="Full Name" required class="w-[50%] mr-5 bg-white/20 text-center h-8 text-2xl text-white font-bold hover:bg-white/40
+                                    <input id="sub-name" type="text" placeholder="Full Name" required class="w-[50%] mr-5 bg-white/20 text-center h-8 text-2xl text-white font-bold hover:bg-white/40
                                         max-md:w-full max-md:mr-0 max-md:h-12 max-md:text-lg rounded-xl">
 
-                                    <input type="email" placeholder="Email" required class="w-[50%] mr-5 bg-white/20 text-center h-8 text-2xl text-white font-bold hover:bg-white/40 p-4
+                                    <input type="email" id="sub-email" placeholder="Email" required class="w-[50%] mr-5 bg-white/20 text-center h-8 text-2xl text-white font-bold hover:bg-white/40 p-4
                                         max-md:w-full max-md:mr-0 max-md:h-12 max-md:text-lg rounded-xl">
                                 </div>
 
-                                <button type="submit" class="bg-white text-2xl mt-2 px-4 py-1 font-bold text-pink-600 transition-transform hover:scale-101 active:scale-95 hover:bg-white/80 hover:cursor-pointer
+
+                                <button id="sub-sumbit-btn" type="submit" class="bg-white text-2xl mt-2 px-4 py-1 font-bold text-pink-600 transition-transform hover:scale-101 active:scale-95 hover:bg-white/80 hover:cursor-pointer
                                     max-md:w-full max-md:py-3 max-md:rounded-xl">
                                     Subscribe
                                 </button>
                             </form>
+
+                            <div id="now-our-sub" class="col-span-3 col-start-3 w-fit ml-4 
+                            max-md:col-span-1 max-md:col-start-auto max-md:w-full max-md:ml-0 xl:w-full">
+
+                                <div id="screen-welcome-div" class="max-md:w-full xl:w-full hidden" >
+                                    <h3 id="sub-final-name" class="bg-white/40 text-2xl xl:px-30 mt-2 px-4 py-1 font-bold text-white/80 text-center">Name</h3>
+                                    <h2 id="sub-final-email" class="bg-white/40 text-2xl xl:px-30 mt-2 px-4 py-1 font-bold text-white/80 text-center">Email</h2>
+                                </div>
+
+
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
+    </div>
+    </section>
+    </main>
 
 
-        <footer id="contact" class="grid grid-rows-4 max-md:px-3 m-4 xl:mt-10">
-            <section id="conclude" class="row-span-3 row-start-1">
-                <div id="footer-content" class="grid grid-cols-4 gap-5 
+    <footer id="contact" class="scroll-mt-10 grid grid-rows-4 max-md:px-3 m-4 xl:mt-2">
+        <section id="conclude" class=" row-span-3 row-start-1">
+            <div id="footer-content" class="grid grid-cols-4 gap-5 
                     max-md:grid-cols-1 max-md:gap-4">
 
-                    <div id="footer-about" class="col-span-1 bg-white col-start-1 p-3 flex flex-col 
+                <div id="footer-about" class="col-span-1 bg-white col-start-1 p-3 flex flex-col 
                         max-md:col-span-1 max-md:col-start-auto rounded-2xl shadow-sm">
 
-                        <div>
-                            <h3 class="text-center font-bold text-black/80">About Us</h3>
-                            <p class="text-black/60 font-light">
-                                We are best Lundry worker in our countery , test us , you will find us great
-                            </p>
-                        </div>
-                    </div>
-
-                    <div id="footer-shortcut" class="col-span-1 bg-white col-start-2 p-3 flex flex-col 
-                        max-md:col-span-1 max-md:col-start-auto rounded-2xl shadow-sm">
-                        <h3 class="text-center font-bold mt-1 mb-2 text-black/80">Important Links</h3>
-                        <div>
-                            <ul class="flex flex-col justify-center items-center text-blue-800 gap-3">
-                                <a href="#about">About Us</a>
-                                <a href="#contact">Contact Us</a>
-                                <a href="#home">Home</a>
-                                <a href="#booking">Service</a>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="footer-contact" class="col-span-1 bg-white col-start-3 p-3 flex flex-col 
-                        max-md:col-span-1 max-md:col-start-auto rounded-2xl shadow-sm">
-                        <h3 class="text-center font-bold mt-1 mb-2 text-black/80">Contact</h3>
-                        <div class="flex flex-col items-center mt-2 font-bold text-blue-900 gap-2">
-                            <a href="mailto: malikvansh2704@gmail.com">✉ Email Us</a>
-                            <a href="tel:+919253412918">📞 Call Us</a>
-                        </div>
-                    </div>
-
-                    <div id="follow" class="col-span-1 col-start-4 p-3 flex flex-col bg-white 
-                        max-md:col-span-1 max-md:col-start-auto rounded-2xl shadow-sm">
-                        <h3 class="text-center font-bold mt-1 mb-2 text-black/80">Follow Us</h3>
-                        <div class="flex flex-col items-center text-2xl gap-3 max-md:flex-row max-md:justify-center">
-                            <a href="https://github.com/mrvanshmalik"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/vanshmalik01"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                        </div>
+                    <div>
+                        <h3 class="text-center font-bold text-black/80">About Us</h3>
+                        <p class="text-black/60 font-light">
+                            We are best Lundry worker in our countery , test us , you will find us great
+                        </p>
                     </div>
                 </div>
-            </section>
 
-            <section id="credit" class="row-span-1 mt-12 max-md:mt-6">
-                <h4 class="text-black/60 font-bold text-center"> © Made By Vansh Malik</h4>
-            </section>
-        </footer>
+                <div id="footer-shortcut" class="col-span-1 bg-white col-start-2 p-3 flex flex-col 
+                        max-md:col-span-1 max-md:col-start-auto rounded-2xl shadow-sm">
+                    <h3 class="text-center font-bold mt-1 mb-2 text-black/80">Important Links</h3>
+                    <div>
+                        <ul class="flex flex-col justify-center items-center text-blue-800 gap-3">
+                            <a href="#about">About Us</a>
+                            <a href="#contact">Contact Us</a>
+                            <a href="#home">Home</a>
+                            <a href="#booking">Service</a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="footer-contact" class="col-span-1 bg-white col-start-3 p-3 flex flex-col 
+                        max-md:col-span-1 max-md:col-start-auto rounded-2xl shadow-sm">
+                    <h3 class="text-center font-bold mt-1 mb-2 text-black/80">Contact</h3>
+                    <div class="flex flex-col items-center mt-2 font-bold text-blue-900 gap-2">
+                        <a href="mailto: malikvansh2704@gmail.com">✉ Email Us</a>
+                        <a href="tel:+919253412918">📞 Call Us</a>
+                    </div>
+                </div>
+
+                <div id="follow" class="col-span-1 col-start-4 p-3 flex flex-col bg-white 
+                        max-md:col-span-1 max-md:col-start-auto rounded-2xl shadow-sm">
+                    <h3 class="text-center font-bold mt-1 mb-2 text-black/80">Follow Us</h3>
+                    <div class="flex flex-col items-center text-2xl gap-3 max-md:flex-row max-md:justify-center">
+                        <a href="https://github.com/mrvanshmalik"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/vanshmalik01"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="credit" class="row-span-1 mt-12 max-md:mt-6">
+            <h4 class="text-black/60 font-bold text-center"> © Made By Vansh Malik</h4>
+        </section>
+    </footer>
 
     </div>
 
 
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("XBKkM2bCs4XGOQ4bn");
+    </script>
 
 
     <script src="index.js"></script>

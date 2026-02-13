@@ -50,7 +50,7 @@ let totalBillAmt = 0;
 
 function totalBill(amt) {
   totalBillAmt += amt;
-  total.innerText = `Rs. ${totalBillAmt}`;
+  total.innerText = ` ₹${totalBillAmt}`;
 }
 
 function cartItemCreator(val) {
@@ -93,7 +93,7 @@ function subFromCart(value) {
   num--;
   let removeBill = data.find((item) => item.name === value)?.price ?? 0;
   totalBillAmt -= removeBill;
-  total.innerText = `Rs. ${totalBillAmt}`;
+  total.innerText = ` ₹${totalBillAmt}`;
 }
 
 allservices.addEventListener("click", (e) => {
@@ -128,20 +128,136 @@ bookingForm.addEventListener("submit", (e) => {
   ).value;
   const input_booking__phn = document.getElementById("input-booking-phn").value;
 
-  if (btn_book == 0) {
-    alert(`Booking Confirmed!! Thanks ${input_booking__name}`);
-    btn_book++;
-    addToCart.replaceChildren();
-    document.getElementById("billing-amt").innerText = "Rs.0";
-  } else {
-    alert("You have already Booked!!!");
-    return;
-  }
+  if (totalBillAmt > 0) {
+    if (btn_book == 0) {
+      alert(
+        `Booking Confirmed!! We sent You a Email , Thanks ${input_booking__name}`,
+      );
+      btn_book++;
+      addToCart.replaceChildren();
+      document.getElementById("billing-amt").innerText = "₹ 0";
+      //refresh button
 
-  let bookingbtn = document.getElementById("booked-btn");
-  bookingbtn.className =
-    " bg-pink-900  mx-auto mt-2 max-md:w-[95%] text-white font-bold py-2 px-4 rounded-full scale-90";
-  bookingbtn.innerText = "Booked";
+      document
+        .querySelectorAll("#service-content button")
+        .forEach(
+          (b) => (
+            (b.innerText = "Add To Cart"),
+            (b.className =
+              "btn-primery  bg-pink-600 hover:bg-pink-800 max-md:w-full")
+          ),
+        );
+
+      let bookingbtn = document.getElementById("booked-btn");
+      bookingbtn.className =
+        " bg-pink-900  mx-auto mt-2 max-md:w-[95%] text-white font-bold py-2 px-4 rounded-full scale-90";
+      bookingbtn.innerText = "Booked";
+    } else {
+      alert("You have already Booked!!!");
+    }
+  } else {
+    alert("please add Item First");
+  }
 
   bookingForm.reset();
 });
+
+//book btn - home 
+
+const bookingBtnHome = document.getElementById('book-btn-home') ;
+bookingBtnHome.addEventListener('click' , (e)=>{
+  e.preventDefault();
+  document.getElementById('booking')?.scrollIntoView({behavior :"smooth" })
+
+})
+
+
+//subscription 
+
+const sub_form = document.getElementById('sub-form-content');
+const welcome = document.getElementById('screen-welcome-div') ;
+
+sub_form.addEventListener('submit' , (e)=>{
+  e.preventDefault();
+  document.getElementById('sub-form-content').classList.add('hidden')
+
+
+  
+  const subname = document.getElementById('sub-name').value.trim();
+  const subemail = document.getElementById('sub-email').value.trim();
+
+
+  alert("Welcome to our Laundry Service Subscription Program !!!") ;
+
+  document.getElementById('sub-final-name').innerText=subname ;
+  document.getElementById('sub-final-email').innerText=subemail;
+
+  welcome.classList.remove("hidden");
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+// email section
+const EMAILJS_SERVICE_ID = "service_6eet95d";
+const EMAILJS_TEMPLATE_ID = "template_iaw1cx3";
+
+function getSelectedItemsText() {
+  const selected = data.filter((i) => i.times > 0);
+  if (!selected.length) return "";
+
+ 
+  return selected.map((i) => `• ${i.name}  -  ₹${i.price}`).join("\n");
+}
+
+async function sendBookingEmail() {
+  if (btn_book !== 0) return;
+
+  const name = document.getElementById("input-booking-name")?.value.trim();
+  const email = document.getElementById("input-booking-email")?.value.trim();
+  const phone = document.getElementById("input-booking-phn")?.value.trim();
+
+  if (!name || !email || !phone) return; // form empty -> skip
+
+  const itemsText = getSelectedItemsText();
+  if (!itemsText) return; // no items -> skip
+
+  const orderId = "ORD-" + Date.now();
+
+  const params = {
+    to_name: name,
+    to_email: email,
+    phone: phone,
+    order_id: orderId,
+    total: totalBillAmt,
+    items: itemsText,
+  };
+
+  return emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
+}
+
+const bookingFormEl = document.getElementById("booking-form-box");
+if (bookingFormEl) {
+  bookingFormEl.addEventListener(
+    "submit",
+    async () => {
+      try {
+        await sendBookingEmail();
+      } catch (err) {
+        console.error("EmailJS failed:", err);
+      }
+    },
+    true,
+  );
+}
