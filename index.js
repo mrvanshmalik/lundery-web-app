@@ -45,7 +45,7 @@ const allservices = document.getElementById("service-content");
 const bookingForm = document.getElementById("booking-form-box");
 const addToCart = document.getElementById("added-items");
 let total = document.getElementById("billing-amt");
-let num = 0;
+// let num = 0;
 let totalBillAmt = 0;
 
 function totalBill(amt) {
@@ -53,20 +53,28 @@ function totalBill(amt) {
   total.innerText = ` ₹${totalBillAmt}`;
 }
 
+function counter() {
+  let count = 0;
+  document.querySelectorAll("#added-items h5").forEach((b) => {
+    count++;
+    b.innerText = count;
+  });
+}
+
 function cartItemCreator(val) {
   let alert_div = document.getElementById("no-item-alert");
   alert_div.style.display = "none";
-  num++;
+  // num++;
   const mainele = document.createElement("div");
-  const subele1 = document.createElement("p");
+  const subele1 = document.createElement("h5");
   const subele2 = document.createElement("p");
   const subele3 = document.createElement("p");
 
   mainele.className = `motion grid grid-cols-6 grid-rows-1 rounded-2xl border-2 border-black/30 bg-white mb-1 `;
   mainele.id = `${val}`;
 
-  subele1.innerText = `${num}`;
   subele1.className = "col-span-1 col-start-1 font-bold text-black text-center";
+  subele1.id = `${val}-1`;
 
   subele2.innerText = `${val}`;
   subele2.className =
@@ -82,6 +90,8 @@ function cartItemCreator(val) {
 
   let bill = data.find((item) => item.name === val)?.price ?? 0;
 
+  counter();
+
   return totalBill(bill);
 }
 
@@ -90,9 +100,10 @@ function cartItemCreator(val) {
 function subFromCart(value) {
   let remove_ele = document.getElementById(`${value}`);
   addToCart.removeChild(remove_ele);
-  num--;
+
   let removeBill = data.find((item) => item.name === value)?.price ?? 0;
   totalBillAmt -= removeBill;
+  counter();
   total.innerText = ` ₹${totalBillAmt}`;
 }
 
@@ -162,52 +173,33 @@ bookingForm.addEventListener("submit", (e) => {
   bookingForm.reset();
 });
 
-//book btn - home 
+//book btn - home
 
-const bookingBtnHome = document.getElementById('book-btn-home') ;
-bookingBtnHome.addEventListener('click' , (e)=>{
+const bookingBtnHome = document.getElementById("book-btn-home");
+bookingBtnHome.addEventListener("click", (e) => {
   e.preventDefault();
-  document.getElementById('booking')?.scrollIntoView({behavior :"smooth" })
+  document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
+});
 
-})
+//subscription
 
+const sub_form = document.getElementById("sub-form-content");
+const welcome = document.getElementById("screen-welcome-div");
 
-//subscription 
-
-const sub_form = document.getElementById('sub-form-content');
-const welcome = document.getElementById('screen-welcome-div') ;
-
-sub_form.addEventListener('submit' , (e)=>{
+sub_form.addEventListener("submit", (e) => {
   e.preventDefault();
-  document.getElementById('sub-form-content').classList.add('hidden')
+  document.getElementById("sub-form-content").classList.add("hidden");
 
+  const subname = document.getElementById("sub-name").value.trim();
+  const subemail = document.getElementById("sub-email").value.trim();
 
-  
-  const subname = document.getElementById('sub-name').value.trim();
-  const subemail = document.getElementById('sub-email').value.trim();
+  alert("Welcome to our Laundry Service Subscription Program !!!");
 
-
-  alert("Welcome to our Laundry Service Subscription Program !!!") ;
-
-  document.getElementById('sub-final-name').innerText=subname ;
-  document.getElementById('sub-final-email').innerText=subemail;
+  document.getElementById("sub-final-name").innerText = subname;
+  document.getElementById("sub-final-email").innerText = subemail;
 
   welcome.classList.remove("hidden");
-
-
-
-})
-
-
-
-
-
-
-
-
-
-
-
+});
 
 // email section
 const EMAILJS_SERVICE_ID = "service_6eet95d";
@@ -217,7 +209,6 @@ function getSelectedItemsText() {
   const selected = data.filter((i) => i.times > 0);
   if (!selected.length) return "";
 
- 
   return selected.map((i) => `• ${i.name}  -  ₹${i.price}`).join("\n");
 }
 
