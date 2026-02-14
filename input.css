@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
-@layer {
+
+@layer components {
   .nav_btn {
-    @apply hover:text-white font-medium  rounded-full px-2;
+    @apply px-2 py-1 rounded font-medium text-white/70 hover:text-white transition hover:bg-white/20 active:scale-90
   }
 
   .motion {
-    @apply transition-transform duration-300  shadow-pink-800/30
-        hover:shadow-md;
-  }
-  .btn-primery {
-    @apply border px-2 py-1 rounded-2xl  text-white font-bold transition-transform  duration-200  active:scale-85
-        hover:cursor-pointer;
+    @apply transition-transform duration-300 hover:shadow-md shadow-pink-800/30;
   }
 
+  .btn-primery {
+    @apply border px-3 py-1 rounded-2xl text-white font-bold
+    transition-transform duration-200 active:scale-95 hover:cursor-pointer;
+  }
 }

@@ -80,7 +80,7 @@ function cartItemCreator(val) {
   subele2.className =
     "col-span-2  col-start-3  font-bold text-pink-600 text-center";
 
-  subele3.innerText = `Rs. ${data.find((item) => item.name === val)?.price ?? "N/A"}`;
+  subele3.innerText = `₹${data.find((item) => item.name === val)?.price ?? "N/A"}`;
   subele3.className =
     "col-span-1  col-start-6  font-bold text-red-600 text-center";
 
@@ -164,7 +164,7 @@ bookingForm.addEventListener("submit", (e) => {
         " bg-pink-900  mx-auto mt-2 max-md:w-[95%] text-white font-bold py-2 px-4 rounded-full scale-90";
       bookingbtn.innerText = "Booked";
     } else {
-      alert("You have already Booked!!!");
+      alert("⚠︎ You have already Booked");
     }
   } else {
     alert("please add Item First");
