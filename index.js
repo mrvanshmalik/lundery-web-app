@@ -29,6 +29,9 @@ if (nameEl) {
   nameEl.innerText = localStorage.getItem("username") || "User Name";
 }
 
+//  no item alert 
+
+
 //add to cart
 
 const data = [
@@ -60,10 +63,11 @@ function counter() {
     b.innerText = count;
   });
 }
+let alert_div = document.getElementById("no-item-alert");
 
 function cartItemCreator(val) {
-  let alert_div = document.getElementById("no-item-alert");
   alert_div.style.display = "none";
+
   // num++;
   const mainele = document.createElement("div");
   const subele1 = document.createElement("h5");
@@ -105,6 +109,10 @@ function subFromCart(value) {
   totalBillAmt -= removeBill;
   counter();
   total.innerText = ` ₹${totalBillAmt}`;
+  if(totalBillAmt===0){
+    alert_div.style.display = "";
+
+  }
 }
 
 allservices.addEventListener("click", (e) => {
@@ -134,10 +142,10 @@ bookingForm.addEventListener("submit", (e) => {
 
   const input_booking__name =
     document.getElementById("input-booking-name").value;
-  const input_booking__email = document.getElementById(
-    "input-booking-email",
-  ).value;
-  const input_booking__phn = document.getElementById("input-booking-phn").value;
+  // const input_booking__email = document.getElementById(
+  //   "input-booking-email",
+  // ).value
+  // const input_booking__phn = document.getElementById("input-booking-phn").value;
 
   if (totalBillAmt > 0) {
     if (btn_book == 0) {
@@ -146,7 +154,13 @@ bookingForm.addEventListener("submit", (e) => {
       );
       btn_book++;
       addToCart.replaceChildren();
+      alert_div.style.display = "";
+
+      addToCart.append(alert_div)
       document.getElementById("billing-amt").innerText = "₹ 0";
+
+      
+
       //refresh button
 
       document
@@ -167,6 +181,7 @@ bookingForm.addEventListener("submit", (e) => {
       alert("⚠︎ You have already Booked");
     }
   } else {
+
     alert("please add Item First");
   }
 
@@ -252,3 +267,15 @@ if (bookingFormEl) {
     true,
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
